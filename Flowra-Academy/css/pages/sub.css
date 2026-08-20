@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+
+:root {
+    --blue: #004080;
+    --gold:#daa520;
+    --green: #40e0d0;
+    --white: #fff;
+}
+
+*{
+    font-family: "Changa", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.title {
+    text-align: center;
+    margin-top:4rem;
+    margin-bottom: 1rem;
+    font-size: 30px;
+}
+
+.preparatory {
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: -2rem;
+    font-size: 25px;
+}
+
+.content-preparatory {
+    display: flex;
+    position: relative;
+    right: 32.2rem;
+    margin-bottom: 9rem;
+    gap: 3rem;
+}
+
+.secondary {
+    text-align: center;
+    font-size: 25px;
+}
+
+.content-secondary {
+    display: flex;
+    position: relative;
+    right: 32.2rem;
+    bottom: 2rem;
+    gap: 3rem;
+}
+
+.card {
+    direction: rtl;
+    background-color: #edf8ff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+    position: relative;
+    left: 55rem;
+    top: 3rem;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.title-card {
+    text-align: center;
+}
+
+ul {
+    padding-top: 0.8rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.8rem;
+}
+
+.button {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: 0.3s;
+    right: 5.5rem;
+    margin-top: 3rem;
+}
+
+.button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: #555;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #555;
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,.button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+
+.text {
+    top: 0
+}
+
+.text,.icon {
+    transition: top 0.5s;
+}
+
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.button:hover {
+    background: #222;
+}
+
+.button:hover .text {
+    top: -100%;
+}
+
+.button:hover .icon {
+    top: 0;
+}
+
+.button:hover:before,.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+footer{
+    position: relative;
+    display: flex;
+    padding-left: 4%;
+    text-align: center;
+    background-color: var(--blue);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-block: 1rem;
+    margin-top: 5.1rem;
+    color: var(--white);
+    font-size: 17px;
+}
+
+.social{
+    position: relative;
+    left: 54rem;
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: -58px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%) scale(0.9);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+
+.modal.show .modal-content {
+    transform: translateY(-50%) scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+    z-index: 1002;
+}
+
+/* Form Container inside Modal */
+.form-container {
+    width: 450px;
+    height: 600px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.form-container .title {
+    text-align: center;
+    margin: 40px 0 3px 0;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.motivation {
+    text-align: center;
+    margin: -2px 0 20px 0;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.input {
+    border-radius: 20px;
+    border: 1px solid #c0c0c0;
+    outline: 0 !important;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    direction: rtl;
+}
+
+.page-link {
+    text-decoration: underline;
+    margin: 0;
+    text-align: end;
+    color: var(--blue);
+    text-decoration-color: var(--blue);
+}
+
+.page-link-label {
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.page-link-label:hover {
+    color: #000;
+}
+
+.form-btn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 0 !important;
+    outline: 0 !important;
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-btn:active {
+    box-shadow: none;
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.sign-up-label {
+    margin: 0;
+    font-size: 14px;
+    color: #747474;
+}
+
+.sign-up-link {
+    margin-left: 1px;
+    font-size: 12px;
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.apple-login-button,
+.google-login-button {
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    gap: 5px;
+}
+
+.apple-login-button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+}
+
+.google-login-button {
+    border: 2px solid #747474;
+}
+
+.apple-icon,
+.google-icon {
+    font-size: 18px;
+    margin-bottom: 1px;
+}

@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+
+:root {
+    --blue: #004080;
+    --gold:#daa520;
+    --green: #40e0d0;
+    --white: #fff;
+}
+
+*{
+    font-family: "Changa", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*=================================
+            Header Info
+===================================*/
+
+div.top-img {
+    background: url(../photos/Gemini_Generated_Image_hkx0d3hkx0d3hkx0.png) no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.nav {
+    display: flex;
+}
+
+.logo {
+    position: absolute;
+    top: 0.4rem;
+    right: 1.5%;
+    width: 8.5rem;
+}
+
+img {
+    width: 17rem;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 2rem;
+}
+
+.links {
+    position: relative;
+    margin-top: 4rem;
+        left: 58.7%;
+}
+
+.contact {
+    border: 1px solid;
+    padding: 0.44rem 1rem;
+    border-radius: 55px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.contact:hover {
+    scale: 0.9;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.sub {
+    border: 1px solid;
+    padding: 0.44rem 1rem;
+    border-radius: 55px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.sub:hover {
+    scale: 0.9;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.courses {
+    border: 1px solid;
+    padding: 0.44rem 1rem;
+    border-radius: 55px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.courses:hover {
+    scale: 0.9;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.login {
+    border: 1px solid;
+    padding: 0.44rem 1rem;
+    border-radius: 55px;
+    font-size: 1rem;
+    font-weight: 700;
+    position: absolute;
+    right: 70rem;
+    top: 3.5rem;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.login i {
+    font-size: 1rem;
+}
+
+.login:hover {
+    scale: 0.9;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.signup {
+    border: 1px solid;
+    padding: 0.44rem 1rem;
+    border-radius: 55px;
+    font-size: 1rem;
+    font-weight: 700;
+    position: absolute;
+    right: 82rem;
+    top: 3.5rem;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.signup i {
+    font-size: 1rem;
+}
+
+.signup:hover {
+    scale: 0.9;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/*==============================
+            main info
+===============================*/
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    position:absolute;
+    top: 50%;
+        transform: translateY(-10%);
+}
+
+.flowra {
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--blue);
+    margin-bottom: 3px;
+}
+
+.pragraph {
+    font-size: 20px;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.search-form {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    /* ensure right-to-left layout for Arabic form */
+    direction: rtl;
+}
+
+.search-input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    padding: 20px 20px 20px 95px;
+    font-size: 18px;
+    color: var(--blue);
+    font-weight: bold;
+    /* display Arabic text on the right side */
+    text-align: right;
+    direction: rtl;
+    border-radius: 10px;
+}
+
+.search-submit {
+    height: 40px;
+    width: 80px;
+    background-color: var(--blue);
+    color: var(--white);    
+    border: none;
+    font-size: 18px;
+    z-index: 2;
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 10px;
+}
+
+.icn {
+    display: flex;
+    justify-content: center;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 2rem;
+}
+
+.icn .title {
+    color: var(--blue);
+    font-size: 40px;
+}
+
+.card {
+    background-color: var(--white);
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+    position: relative;
+    cursor: default;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.info h3 {
+    color: var(--blue);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px;
+    margin-bottom: -0.5rem;
+}
+
+.class {
+    color: var(--gold);
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.level {
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-weight: 500;
+}
+
+.fa-gift {
+    margin-top: 0.6rem;
+    color: var(--blue);
+    font-size: 2.5rem;
+    padding-left: 0.3rem;
+}
+
+.Services {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.icon {
+    color: var(--blue);
+    font-size: 8em;
+    text-align: center;
+}
+
+.information {
+    text-align: center;
+}
+
+.information h3 {
+    color: var(--blue);
+    font-size: 28px;
+    font-weight: 800;
+    margin: -18px;
+    margin-bottom: 0.8rem;
+}
+
+.information p {
+    font-weight: 500;
+}
+
+/*======================
+    Sign Up Modal
+======================*/
+
+.modal {
+    display: none;
+    position: fixed;
+    top: -58px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%) scale(0.9);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+
+.modal.show .modal-content {
+    transform: translateY(-50%) scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+    z-index: 1002;
+}
+
+/* Form Container inside Modal */
+.form-container {
+    width: 450px;
+    height: 550px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    margin: 2px 0 3px 0;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.motivation {
+    text-align: center;
+    margin: -2px 0 20px 0;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.input {
+    border-radius: 20px;
+    border: 1px solid #c0c0c0;
+    outline: 0 !important;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    direction: rtl;
+}
+
+.page-link {
+    text-decoration: underline;
+    margin: 0;
+    text-align: end;
+    color: var(--blue);
+    text-decoration-color: var(--blue);
+}
+
+.page-link-label {
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.page-link-label:hover {
+    color: #000;
+}
+
+.form-btn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 0 !important;
+    outline: 0 !important;
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-btn:active {
+    box-shadow: none;
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.sign-up-label {
+    margin: 0;
+    font-size: 14px;
+    color: #747474;
+}
+
+.sign-up-link {
+    margin-left: 1px;
+    font-size: 12px;
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.apple-login-button,
+.google-login-button {
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    gap: 5px;
+}
+
+.apple-login-button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+}
+
+.google-login-button {
+    border: 2px solid #747474;
+}
+
+.apple-icon,
+.google-icon {
+    font-size: 18px;
+    margin-bottom: 1px;
+}
+
+footer{
+    position: relative;
+    display: flex;
+    padding-left: 4%;
+    text-align: center;
+    background-color: var(--blue);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-block: 1rem;
+    margin-top: 3rem;
+    color: var(--white);
+    font-size: 17px;
+}
+
+.social{
+    position: relative;
+    left: 54rem;
+    color: var(--white);
+    text-transform: capitalize;
+}
